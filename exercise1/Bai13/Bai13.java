@@ -1,4 +1,4 @@
-package exercise1;
+//package exercise1;
 
 public class Bai13 {
     public static void main(String[] args) {
