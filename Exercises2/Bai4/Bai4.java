@@ -1,5 +1,3 @@
-//package exercise2;
-
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -21,7 +19,7 @@ public class Bai4 {
         boolean isExist = false;
         for (int i = 0; i < n; i++) {
             isExist = false;
-            for (int j = 0; j < count; j++) {
+            for (int j = 0; j < bSize; j++) {
                 if(arr[i] == brr[j]){
                     isExist = true;
                     break;
@@ -31,6 +29,7 @@ public class Bai4 {
                 brr[bSize++] = arr[i];
             }
         }
+
         System.out.println("Truoc khi sap xep: ");
         System.out.println(Arrays.toString(arr));
         // thao tac 1
@@ -38,7 +37,8 @@ public class Bai4 {
         System.out.println("Sau khi sap xep: ");
         System.out.println(Arrays.toString(arr));
         // thao tac 2
-        Arrays.sort(brr);
+        brr = Arrays.copyOfRange(brr, 0, bSize);
+        Arrays.sort(brr); // cat bo cac phan tu du thua
         System.out.println("Mang chi chua cac phan tu duy nhat: ");
         System.out.println(Arrays.toString(brr));
     }
